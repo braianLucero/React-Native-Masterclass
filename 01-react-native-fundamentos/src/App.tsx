@@ -5,7 +5,8 @@
 // import { CounterWithHook } from "./components";
 
 // import { LoginPage } from "./components";
-import { UserPage } from "./components/UserPage";
+// import { UserPage } from "./components/UserPage";
+import { FormPage } from "./components/FormPage";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         {/* <BasicFunction /> */}
         {/* <CounterWithHook /> */}
         {/* <LoginPage /> */}
-        <UserPage />
+        {/* <UserPage /> */}
+        <FormPage />
       </main>
     </>
   );
