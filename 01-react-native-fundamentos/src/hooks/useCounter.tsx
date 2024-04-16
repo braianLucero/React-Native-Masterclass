@@ -17,6 +17,7 @@ export const useCounter = ({ initialValue = 0 }: Options) => {
 
     //Methods
     increaseBy,
+    // setCounter,
     // decreaseBy,
   };
 };

@@ -11,7 +11,8 @@ export const CounterWithHook = () => {
       <div>
         <button onClick={() => increaseBy(1)}>+1</button>
         &nbsp;
-        {/* <button onClick={() => decreaseBy(-1)}>-1</button> */}
+        {/* <button onClick={() => decreaseBy()}>-1</button> */}
+        {/* <button onClick={() => setCounter(counter - 1)}>-1 </button> */}
       </div>
     </>
   );
