@@ -1,11 +1,16 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ReqResUserListResponse, User } from "../interfaces";
 
-const loadUsers = async (): Promise<User[]> => {
+const loadUsers = async (page: number = 1): Promise<User[]> => {
   try {
     const { data } = await axios.get<ReqResUserListResponse>(
-      "https://reqres.in/api/users"
+      "https://reqres.in/api/users",
+      {
+        params: {
+          page: page,
+        },
+      }
     );
     return data.data;
   } catch (error) {
@@ -17,10 +22,28 @@ const loadUsers = async (): Promise<User[]> => {
 export const UserPage = () => {
   const [users, setUsers] = useState<User[]>([]);
 
+  const currentPageRef = useRef(1);
+
   useEffect(() => {
-    loadUsers().then(setUsers);
+    loadUsers(currentPageRef.current).then(setUsers);
   }, []);
 
+  const nextPage = async () => {
+    currentPageRef.current++;
+    const user = await loadUsers(currentPageRef.current);
+    if (user.length > 0) {
+      setUsers(user);
+    } else {
+      currentPageRef.current--;
+    }
+  };
+
+  const prevPage = async () => {
+    if (currentPageRef.current < 1) return;
+    currentPageRef.current--;
+    const users = await loadUsers(currentPageRef.current);
+    setUsers(users);
+  };
   return (
     <>
       <h3> Usuarios: </h3>
@@ -38,6 +61,11 @@ export const UserPage = () => {
           ))}
         </tbody>
       </table>
+
+      <div>
+        <button onClick={prevPage}>Prev</button>
+        <button onClick={nextPage}>Next</button>
+      </div>
     </>
   );
 };
