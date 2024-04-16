@@ -1,29 +1,29 @@
-// import { BasicTypes } from "./typescript";
-// import { ObjectLiterals } from "./typescript/";
-// import { BasicFunction } from "./typescript";
-// import { Counter } from "./components/Counter";
-// import { CounterWithHook } from "./components";
-
-// import { LoginPage } from "./components";
-// import { UserPage } from "./components/UserPage";
-import { FormPage } from "./components/FormPage";
+import { Counter, CounterWithHook, FormsPage, LoginPage, UsersPage } from './components';
+// import { 
+  // BasicFunctions,
+  // BasicTypes, 
+  // ObjectLiterals 
+// } from './typescript';
 
 function App() {
-  return (
-    <>
-      <main>
-        <h1>Introduccion a React - ts</h1>
+  
 
+  return (
+    <main>
+        <h1>Introducción a TS - React</h1>
+        
+        {/* Aquí */}
         {/* <BasicTypes /> */}
         {/* <ObjectLiterals /> */}
-        {/* <BasicFunction /> */}
+        {/* <BasicFunctions /> */}
+        {/* <Counter /> */}
         {/* <CounterWithHook /> */}
         {/* <LoginPage /> */}
-        {/* <UserPage /> */}
-        <FormPage />
-      </main>
-    </>
-  );
+        {/* <UsersPage /> */}
+        <FormsPage />
+
+    </main>
+  )
 }
 
-export default App;
+export default App

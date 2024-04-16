@@ -1,3 +1,4 @@
+
 interface Person {
   firstName: string;
   lastName: string;
@@ -11,23 +12,29 @@ interface Address {
   houseNo: number;
 }
 
+
+
 export const ObjectLiterals = () => {
+
+
   const person: Person = {
-    age: 21,
-    firstName: "Braian",
-    lastName: "Lucero",
+    age: 37,
+    firstName: 'Fernando',
+    lastName: 'Herrera',
     address: {
-      country: "Argentina ",
-      houseNo: 1234,
-    },
-    isAlive: undefined,
+      country: 'Canada',
+      houseNo: 615
+    }
   };
+
+
 
   return (
     <>
-      <h3>Objetos Literales</h3>
-
-      <pre> {JSON.stringify(person, null, 2)}</pre>
+      <h3>Objetos literales</h3>
+      <pre>
+        { JSON.stringify( person, null, 2 ) }
+      </pre>
     </>
   );
 };

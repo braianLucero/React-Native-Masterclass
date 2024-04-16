@@ -1,23 +1,27 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 interface Options {
   initialValue?: number;
 }
 
 export const useCounter = ({ initialValue = 0 }: Options) => {
-  const [counter, setCounter] = useState<number>(initialValue);
+  
+  const [ count, setCount ] = useState<number>(initialValue);
 
-  const increaseBy = (value: number) => {
-    setCounter(counter + value);
-  };
 
+  const increaseBy = ( value: number ) => {
+    const newValue = count + value;
+    if ( newValue < 0 ) return;
+    
+    setCount( count + value );
+  }
+
+  
   return {
-    // properties
-    counter,
+    // Properties
+    count,
 
-    //Methods
+    // Methods
     increaseBy,
-    // setCounter,
-    // decreaseBy,
-  };
-};
+  }
+}

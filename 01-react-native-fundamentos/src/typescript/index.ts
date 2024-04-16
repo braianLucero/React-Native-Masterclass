@@ -1,3 +1,5 @@
-export * from "./BasicTypes";
-export * from "./ObjectLiterals";
-export * from "./BasicFunction";
+
+
+export * from './BasicFunctions';
+export * from './BasicTypes';
+export * from './ObjectLiterals';

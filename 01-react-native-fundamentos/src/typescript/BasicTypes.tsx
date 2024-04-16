@@ -1,16 +1,26 @@
+
+
 export const BasicTypes = () => {
-  const name: string = "braian";
-  const number: number = 21;
+
+  const name:string = 'Fernando';
+  const age: number = 37;
   const isActive: boolean = true;
-  const powers: string[] = ["react ", "redux", "mongo", "bobo"];
-  //   powers.push("Hola ");
+
+  const powers: string[] =  ['React','ReactNative','Angular','Vue','Qwik'];
+
+  // powers.push('Next')
+  
 
   return (
     <>
-      <h3>Tipos Basicos</h3>
-      {name} {number} {isActive ? "True" : "no esta activo "}
+      <h3>Tipos básicos</h3>
+
+      { name } { age } { isActive ? 'true':'false' } 
       <br />
-      {powers.join(",")}
+
+      { powers.join(', ') }
+
+
     </>
-  );
-};
+  )
+}

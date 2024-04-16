@@ -1,7 +1,8 @@
-import { create } from "zustand";
+import { create } from 'zustand';
+
 
 interface AuthState {
-  status: "authenticated " | "unauthenticated" | "checking";
+  status: 'authenticated' | 'unauthenticated' | 'checking';
   token?: string;
   user?: {
     name: string;
@@ -12,26 +13,34 @@ interface AuthState {
   logout: () => void;
 }
 
-export const useAuthStore = create<AuthState>()((set) => ({
-  status: "checking",
+
+
+export const useAuthStore = create<AuthState>()( ( set ) => ( {
+
+  status: 'checking',
   token: undefined,
   user: undefined,
-  login: (email: string /* password: string*/) => {
+
+  login: (email: string, password: string) => {
+
     set({
-      status: "authenticated ",
-      token: "ABC123",
+      status: 'authenticated',
+      token: 'ABC123',
       user: {
-        name: "Braian Lucero ",
+        name: 'John Doe',
         email: email,
-      },
+      }
     });
+
   },
 
   logout: () => {
-    set({
-      status: "unauthenticated",
-      token: undefined,
-      user: undefined,
+    set({ 
+      status: 'unauthenticated', 
+      token: undefined, 
+      user: undefined 
     });
   },
-}));
+
+} )
+);
