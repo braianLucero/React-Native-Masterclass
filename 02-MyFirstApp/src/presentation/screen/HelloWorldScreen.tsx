@@ -1,9 +1,15 @@
 import {View, Text, StyleSheet} from 'react-native';
 
-export const HelloWorldScreen = () => {
+interface Props {
+  name?: string;
+}
+
+export const HelloWorldScreen = ({name = 'World'}: Props) => {
   return (
     <View style={style.constainer}>
-      <Text style={style.title}>Hello World !</Text>
+      <Text numberOfLines={1} style={style.title}>
+        Hello ,{name}{' '}
+      </Text>
     </View>
   );
 };
