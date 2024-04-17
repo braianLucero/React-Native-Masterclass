@@ -1,9 +1,10 @@
-import {Text, View} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import {HelloWorldScreen} from './src/presentation/screen/HelloWorldScreen';
 
 export const App = () => {
   return (
-    <View style={{display: 'flex', alignItems: 'center', marginTop: 50}}>
-      <Text>Hola Mundo</Text>
-    </View>
+    <SafeAreaView style={{flex: 1}}>
+      <HelloWorldScreen />
+    </SafeAreaView>
   );
 };
