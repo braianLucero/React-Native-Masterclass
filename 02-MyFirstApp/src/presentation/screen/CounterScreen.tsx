@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 import {PrimaryBotton} from '../components/';
 
 export const CounterScreen = () => {
@@ -13,6 +13,9 @@ export const CounterScreen = () => {
     <View style={style.container}>
       <Text style={style.title}>{count}</Text>
       <PrimaryBotton label="Increment" onPress={handleIncrement} />
+      <Button style={[styles.button, buttonStyle]} onPress={onPress}>
+        <Text style={[styles.text, textStyle]}>{title}</Text>
+      </Button>
     </View>
   );
 };
