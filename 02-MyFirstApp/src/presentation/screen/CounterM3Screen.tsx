@@ -12,9 +12,9 @@ export const CounterM3Screen = () => {
       <Text style={globalStyle.title}>{count}</Text>
 
       <FAB
-        label="+"
         style={globalStyle.fab}
         onPress={() => setCount(count + 1)}
+        icon="add-outline"
       />
     </View>
   );
