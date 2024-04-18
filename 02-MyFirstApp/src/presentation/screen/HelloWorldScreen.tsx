@@ -1,28 +1,29 @@
+import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
 interface Props {
   name?: string;
 }
 
-export const HelloWorldScreen = ({name = 'World'}: Props) => {
+export const HelloWorldScreen = ({name}: Props) => {
   return (
-    <View style={style.constainer}>
+    <View style={style.container}>
       <Text numberOfLines={1} style={style.title}>
-        Hello ,{name}{' '}
+        Hello , {name}{' '}
       </Text>
     </View>
   );
 };
 
 const style = StyleSheet.create({
-  constainer: {
+  container: {
     flex: 1,
+    backgroundColor: 'black',
     justifyContent: 'center',
   },
   title: {
-    fontSize: 45,
     textAlign: 'center',
-    color: 'black',
-    padding: 20,
+    fontSize: 50,
+    color: '#fff',
   },
 });

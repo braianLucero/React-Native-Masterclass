@@ -1,1 +1,1 @@
-export * from './shared/PrimaryBotton';
+export * from './shared/PrimaryButton';
