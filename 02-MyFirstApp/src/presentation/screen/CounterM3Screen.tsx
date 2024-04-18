@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text} from 'react-native';
 import {globalStyle} from '../theme/globalStyles';
 import {FAB} from 'react-native-paper';
 
