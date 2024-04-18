@@ -5,14 +5,14 @@ import {PrimaryBotton} from '../components/';
 export const CounterScreen = () => {
   const [count, setCount] = useState(0);
 
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
   return (
     <View style={style.container}>
       <Text style={style.title}>{count}</Text>
-      <PrimaryBotton
-        label="Incrementar"
-        onPress={() => setCount(count + 1)}
-        onLongPress={() => setCount(0)}
-      />
+      <PrimaryBotton label="Increment" onPress={handleIncrement} />
     </View>
   );
 };

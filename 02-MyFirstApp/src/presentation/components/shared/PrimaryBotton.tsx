@@ -27,4 +27,13 @@ const style = StyleSheet.create({
     color: '#000',
     fontWeight: '300',
   },
+  button: {
+    backgroundColor: 'blue',
+    padding: 10,
+    borderRadius: 5,
+    margin: 10,
+  },
+  buttonPress: {
+    backgroundColor: 'darkblue',
+  },
 });
