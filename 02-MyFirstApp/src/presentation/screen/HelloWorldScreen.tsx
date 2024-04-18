@@ -27,3 +27,5 @@ const style = StyleSheet.create({
     color: '#fff',
   },
 });
+
+//Importando los módulos necesarios de React, React Native y otras bibliotecas

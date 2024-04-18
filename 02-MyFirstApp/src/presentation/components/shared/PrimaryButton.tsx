@@ -1,5 +1,7 @@
 import React from 'react';
 import {Text, Pressable, StyleSheet} from 'react-native';
+
+// recibiendo props  mediante Interfaces
 interface Props {
   label: string;
   onPress?: () => void;
@@ -15,7 +17,6 @@ export const PrimaryButton = ({label, onPress, onLongPress}: Props) => {
     </Pressable>
   );
 };
-
 const style = StyleSheet.create({
   container: {
     flex: 1,
@@ -42,3 +43,5 @@ const style = StyleSheet.create({
     backgroundColor: '#4746AB',
   },
 });
+
+// platform en un Podfile se utiliza para especificar la plataforma y la versión mínima de iOS (o tvOS) que tu aplicación soportará, lo que ayuda a CocoaPods a configurar las dependencias correctamente para tu proyecto.
