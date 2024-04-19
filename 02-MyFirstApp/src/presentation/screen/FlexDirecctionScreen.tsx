@@ -7,6 +7,10 @@ export const FlexDirecctionScreen = () => {
       <View style={[style.box, style.box1]} />
       <View style={[style.box, style.box2]} />
       <View style={[style.box, style.box3]} />
+      <View style={[style.box, style.box1]} />
+      <View style={[style.box, style.box2]} />
+      <View style={[style.box, style.box3]} />
+      <View style={[style.box, style.box1]} />
     </View>
   );
 };
@@ -16,8 +20,9 @@ const style = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fffa',
     justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    flexDirection: 'row',
+    alignItems: 'stretch',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
   },
   box: {
     // flex: 1,
@@ -29,10 +34,8 @@ const style = StyleSheet.create({
   },
   box2: {
     backgroundColor: '#4240a2',
-    alignSelf: 'flex-end',
   },
   box3: {
     backgroundColor: '#2e2d71',
-    alignSelf: 'center',
   },
 });
