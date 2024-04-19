@@ -15,11 +15,12 @@ const style = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fffa',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    flexDirection: 'column',
   },
   box: {
+    // flex: 1,
     width: 100,
     height: 100,
   },
