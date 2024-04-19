@@ -8,7 +8,8 @@ import IonIcon from 'react-native-vector-icons/Ionicons';
 // import {BoxObjectModelScreen} from './src/presentation/screen/BoxObjectModelScreen';
 // import {DimentionsScreen} from './src/presentation/screen/DimentionsScreen';
 // import {PositionScreen} from './src/presentation/screen/PositionScreen';
-import {FlexScreen} from './src/presentation/screen/FlexScreen';
+// import {FlexScreen} from './src/presentation/screen/FlexScreen';
+import {FlexDirecctionScreen} from '../02-MyFirstApp/src/presentation/screen/FlexDirecctionScreen';
 export const App = () => {
   return (
     <PaperProvider
@@ -22,7 +23,8 @@ export const App = () => {
         {/* <BoxObjectModelScreen /> */}
         {/* <DimentionsScreen/> */}
         {/* <PositionScreen /> */}
-        <FlexScreen />
+        {/* <FlexScreen /> */}
+        <FlexDirecctionScreen />
       </SafeAreaView>
     </PaperProvider>
   );
