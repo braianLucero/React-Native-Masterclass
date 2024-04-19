@@ -4,8 +4,10 @@ import {StyleSheet, View} from 'react-native';
 export const PositionScreen = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.greenBox} />
+      <View style={styles.purpleBox} />
+
       <View style={styles.orangeBox} />
+      <View style={styles.greenBox} />
     </View>
   );
 };
@@ -13,12 +15,9 @@ export const PositionScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
-    flexDirection: 'row', // Para que los elementos se alineen en fila
-    justifyContent: 'space-between', // Para espaciar los elementos
-    alignItems: 'flex-end', // Para alinear los elementos al final del contenedor
-    paddingHorizontal: 20, // Añade un poco de espacio en los bordes
-    paddingBottom: 20,
+    backgroundColor: '#757575',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
   purpleBox: {
     width: 100,
@@ -27,7 +26,7 @@ const styles = StyleSheet.create({
     borderWidth: 10,
     borderColor: 'white',
     position: 'absolute',
-    top: 10,
+    bottom: 0,
   },
   orangeBox: {
     width: 100,
@@ -35,17 +34,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'orange',
     borderWidth: 10,
     borderColor: 'white',
-    // right: 0, // No necesitas esta propiedad
+    position: 'absolute',
+    top: 0,
+    right: 0,
   },
   greenBox: {
     width: 100,
     height: 100,
-    backgroundColor: 'green ',
+    backgroundColor: 'green',
     borderWidth: 10,
     borderColor: 'white',
     position: 'absolute',
     bottom: 0,
-    left: 0,
+    right: 0,
   },
 });
 
