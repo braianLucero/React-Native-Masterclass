@@ -16,8 +16,8 @@ const style = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fffa',
     justifyContent: 'space-between',
-    alignItems: 'flex-end',
-    flexDirection: 'column',
+    alignItems: 'flex-start',
+    flexDirection: 'row',
   },
   box: {
     // flex: 1,
@@ -29,8 +29,10 @@ const style = StyleSheet.create({
   },
   box2: {
     backgroundColor: '#4240a2',
+    alignSelf: 'flex-end',
   },
   box3: {
-    backgroundColor: '#[2e2d71',
+    backgroundColor: '#2e2d71',
+    alignSelf: 'center',
   },
 });
