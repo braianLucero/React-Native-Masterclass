@@ -3,19 +3,22 @@ import {StyleSheet, View} from 'react-native';
 
 export const PositionScreen = () => {
   return (
-    <View style={style.container}>
-      <View style={style.greenBox} />
-      <View style={style.orangeBox} />
+    <View style={styles.container}>
+      <View style={styles.greenBox} />
+      <View style={styles.orangeBox} />
     </View>
   );
 };
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000',
-    // justifyContent: 'center',
-    // alignItems: 'center',
+    flexDirection: 'row', // Para que los elementos se alineen en fila
+    justifyContent: 'space-between', // Para espaciar los elementos
+    alignItems: 'flex-end', // Para alinear los elementos al final del contenedor
+    paddingHorizontal: 20, // Añade un poco de espacio en los bordes
+    paddingBottom: 20,
   },
   purpleBox: {
     width: 100,
@@ -32,7 +35,7 @@ const style = StyleSheet.create({
     backgroundColor: 'orange',
     borderWidth: 10,
     borderColor: 'white',
-    right: 0,
+    // right: 0, // No necesitas esta propiedad
   },
   greenBox: {
     width: 100,
@@ -41,8 +44,9 @@ const style = StyleSheet.create({
     borderWidth: 10,
     borderColor: 'white',
     position: 'absolute',
-    left: 0,
     bottom: 0,
+    left: 0,
   },
 });
+
 // las cajas hijas siempren dependen del padre
