@@ -15,7 +15,8 @@ const style = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#28425B',
-
+    // justifyContent: 'center',
+    // alignItems: 'center',
     //Todo:tarea
   },
   box: {
@@ -26,11 +27,24 @@ const style = StyleSheet.create({
   },
   purpleBox: {
     backgroundColor: '#5856D6',
+    // flex: 1,
+    // right: 40,
+    // top: 283,
+    // position: 'absolute',
   },
   orangeBox: {
     backgroundColor: '#F0A23B',
+    // flex: 1,
+    // left: 100,
+    // // bottom: 100,
+    // // // flex: 1,
+    // position: 'relative',
   },
   blueBox: {
     backgroundColor: '#28C4D9',
+    // flex: 1,
+    // position: 'relative',
+    // right: 100,
+    // // width: 'auto',
   },
 });
