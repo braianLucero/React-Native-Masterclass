@@ -35,4 +35,27 @@ export const style = StyleSheet.create({
     textAlign: 'right',
     fontWeight: '300',
   },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 18,
+    paddingHorizontal: 10,
+  },
+
+  button: {
+    height: 80,
+    width: 80,
+    backgroundColor: color.darkGray,
+    borderRadius: 40,
+    justifyContent: 'center',
+    marginHorizontal: 10,
+    alignItems: 'center',
+  },
+  buttonText: {
+    textAlign: 'center',
+    padding: 10,
+    fontSize: 30,
+    color: 'white',
+    fontWeight: '300',
+  },
 });
