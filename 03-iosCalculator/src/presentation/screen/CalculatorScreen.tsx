@@ -5,7 +5,7 @@ import {CalculatorButton} from '../components/CalculatorButton';
 import {useCalculator} from '../hooks/useCalculator';
 
 export const CalculatorScreen = () => {
-  const {number, buildNumber} = useCalculator();
+  const {number, buildNumber, toggleSign} = useCalculator();
 
   return (
     <View style={style.calculatorContainer}>
@@ -26,7 +26,7 @@ export const CalculatorScreen = () => {
           color={colors.lightGray}
         />
         <CalculatorButton
-          onPress={() => console.log('+/-')}
+          onPress={toggleSign}
           label="+/-"
           blacktext
           color={colors.lightGray}
