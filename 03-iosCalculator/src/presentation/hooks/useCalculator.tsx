@@ -99,6 +99,29 @@ export const useCalculator = () => {
     setLastNumber();
     lastOperation.current = Operator.add;
   };
+
+  const calculateResult = () => {
+    const num1 = Number(number);
+    const num2 = Number(prevNumber);
+
+    switch (lastOperation.current) {
+      case Operator.add:
+        setNumber(`${num1 + num2}`);
+        break;
+      case Operator.sub:
+        setNumber(`${num2 + num1}`);
+        break;
+      case Operator.multiplay:
+        setNumber(`${num1 * num2}`);
+        break;
+      case Operator.divide:
+        setNumber(`${num2 / num1}`);
+        break;
+      default:
+        throw new Error('operacion no implementada ');
+    }
+    setPrevNumber('0');
+  };
   return {
     // propiedades
 
@@ -113,5 +136,6 @@ export const useCalculator = () => {
     multiPlyOperation,
     subtractOperation,
     addOperation,
+    calculateResult,
   };
 };
