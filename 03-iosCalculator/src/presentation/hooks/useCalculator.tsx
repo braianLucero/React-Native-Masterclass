@@ -2,10 +2,11 @@ import {useRef, useState} from 'react';
 
 enum Operator {
   add,
-  sub,
-  multiplay,
+  subtract,
+  multiply,
   divide,
 }
+
 export const useCalculator = () => {
   const [number, setNumber] = useState('0');
   const [prevNumber, setPrevNumber] = useState('0');
@@ -17,19 +18,20 @@ export const useCalculator = () => {
     setPrevNumber('0');
   };
 
-  // borrar el ultimo numero
+  // Borrar el último número
   const deleteOperation = () => {
     let currentSign = '';
     let temporalNumber = number;
 
     if (number.includes('-')) {
       currentSign = '-';
-      temporalNumber = number.substring(1);
+      temporalNumber = number.substring(1); // 88
     }
 
     if (temporalNumber.length > 1) {
-      return setNumber(currentSign + temporalNumber.slice(0, -1));
+      return setNumber(currentSign + temporalNumber.slice(0, -1)); //
     }
+
     setNumber('0');
   };
 
@@ -37,6 +39,7 @@ export const useCalculator = () => {
     if (number.includes('-')) {
       return setNumber(number.replace('-', ''));
     }
+
     setNumber('-' + number);
   };
 
@@ -46,20 +49,22 @@ export const useCalculator = () => {
     }
 
     if (number.startsWith('0') || number.startsWith('-0')) {
+      // Punto decimal
       if (numberString === '.') {
         return setNumber(number + numberString);
       }
 
-      //evaluar si es otro cero y no hay punto
-
+      // Evaluar si es otro cero y no hay punto
       if (numberString === '0' && number.includes('.')) {
         return setNumber(number + numberString);
       }
-      // evaluar si es diferente del cero , no hay punto , y es el primer numero
-      if (numberString !== '0' && number.includes('.')) {
+
+      // Evaluar si es diferente de cero, no hay punto, y es el primer numero
+      if (numberString !== '0' && !number.includes('.')) {
         return setNumber(numberString);
       }
-      // evitar 0000
+
+      // Evitar 000000.00
       if (numberString === '0' && !number.includes('.')) {
         return;
       }
@@ -70,14 +75,13 @@ export const useCalculator = () => {
     setNumber(number + numberString);
   };
 
-  // const buildNumber = (numberString: string) => {};
-
   const setLastNumber = () => {
     if (number.endsWith('.')) {
       setPrevNumber(number.slice(0, -1));
     } else {
       setPrevNumber(number);
     }
+
     setNumber('0');
   };
 
@@ -85,14 +89,15 @@ export const useCalculator = () => {
     setLastNumber();
     lastOperation.current = Operator.divide;
   };
-  const multiPlyOperation = () => {
+
+  const multiplyOperation = () => {
     setLastNumber();
-    lastOperation.current = Operator.multiplay;
+    lastOperation.current = Operator.multiply;
   };
 
   const subtractOperation = () => {
     setLastNumber();
-    lastOperation.current = Operator.sub;
+    lastOperation.current = Operator.subtract;
   };
 
   const addOperation = () => {
@@ -101,39 +106,45 @@ export const useCalculator = () => {
   };
 
   const calculateResult = () => {
-    const num1 = Number(number);
-    const num2 = Number(prevNumber);
+    const num1 = Number(number); //NaN
+    const num2 = Number(prevNumber); //NaN
 
     switch (lastOperation.current) {
       case Operator.add:
         setNumber(`${num1 + num2}`);
         break;
-      case Operator.sub:
-        setNumber(`${num2 + num1}`);
+
+      case Operator.subtract:
+        setNumber(`${num2 - num1}`);
         break;
-      case Operator.multiplay:
+
+      case Operator.multiply:
         setNumber(`${num1 * num2}`);
         break;
+
       case Operator.divide:
         setNumber(`${num2 / num1}`);
         break;
+
       default:
-        throw new Error('operacion no implementada ');
+        throw new Error('Operation not implemented');
     }
+
     setPrevNumber('0');
   };
-  return {
-    // propiedades
 
+  return {
+    // Properties
     number,
     prevNumber,
-    // metodos
+
+    // Methods
     buildNumber,
     toggleSign,
     clean,
     deleteOperation,
     divideOperation,
-    multiPlyOperation,
+    multiplyOperation,
     subtractOperation,
     addOperation,
     calculateResult,

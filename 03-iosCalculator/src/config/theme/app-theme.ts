@@ -7,21 +7,21 @@ export const colors = {
 
   textPrimary: 'white',
   textSecondary: '#666666',
-  background: '#000',
+  background: '#000000',
 };
 
-export const style = StyleSheet.create({
+export const styles = StyleSheet.create({
   background: {
     flex: 1,
     backgroundColor: colors.background,
   },
+
   calculatorContainer: {
     flex: 1,
     padding: 20,
     justifyContent: 'flex-end',
   },
 
-  // text
   mainResult: {
     color: colors.textPrimary,
     fontSize: 70,
@@ -29,12 +29,14 @@ export const style = StyleSheet.create({
     marginBottom: 10,
     fontWeight: '400',
   },
+
   subResult: {
     color: colors.textSecondary,
     fontSize: 40,
     textAlign: 'right',
     fontWeight: '300',
   },
+
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -46,11 +48,11 @@ export const style = StyleSheet.create({
     height: 80,
     width: 80,
     backgroundColor: colors.darkGray,
-    borderRadius: 40,
+    borderRadius: 100,
     justifyContent: 'center',
     marginHorizontal: 10,
-    alignItems: 'center',
   },
+
   buttonText: {
     textAlign: 'center',
     padding: 10,

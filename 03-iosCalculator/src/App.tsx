@@ -1,14 +1,15 @@
-import React from 'react';
 import {StatusBar, View} from 'react-native';
-import {CalculatorScreen} from './presentation/screen/CalculatorScreen';
-import {style} from './config/theme/app-them';
+import {CalculatorScreen} from './presentation/screens/CalculatorScreen';
+import {styles} from './config/theme/app-theme';
 
-export const App = () => {
+function App() {
   return (
-    <View style={style.background}>
+    <View style={styles.background}>
       <StatusBar barStyle={'light-content'} backgroundColor={'black'} />
 
       <CalculatorScreen />
     </View>
   );
-};
+}
+
+export default App;
