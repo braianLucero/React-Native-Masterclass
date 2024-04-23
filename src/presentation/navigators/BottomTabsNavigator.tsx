@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {HomeScreen} from '../screen/home/HomeScreen';
 import {ProfileScreen} from '../screen/profile/ProfileScreen';
 import {SettingsScreen} from '../screen/settings/SettingsScreen';
+import {userCountStore} from '../../store/counter-store';
 
 const Tab = createBottomTabNavigator();
 

@@ -8,8 +8,8 @@ export interface Counter {
 export const userCountStore = create<Counter>()((set, get) => ({
   count: 0,
 
-  increment: (value: number) => {
+  increment: value => {
     console.log(get);
-    set({value});
+    set(state => ({count: state.count + value}));
   },
 }));
