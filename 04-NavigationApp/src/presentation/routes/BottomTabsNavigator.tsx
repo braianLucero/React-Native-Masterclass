@@ -1,12 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Tab1Screen} from '../screen/tabs/Tab1Screen';
-import {Tab2Screen} from '../screen/tabs/Tab2Screen';
-import {Tab3Screen} from '../screen/tabs/Tab3Screen';
+// import {Tab2Screen} from '../screen/tabs/Tab2Screen';
+// import {Tab3Screen} from '../screen/tabs/Tab3Screen';
 import {globalColors} from '../theme/theme';
 import {Text} from 'react-native';
 import {TopTapsNavigators} from './TopTapsNavigators';
 import {StackNavigator} from './StackNavigator';
+import {IonIcons} from '../components/shared/IonIcons';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,15 +36,15 @@ export const BottomTabsNavigator = () => {
         name="Tab1"
         options={{
           title: 'Tab1',
-          tabBarIcon: ({color}) => <Text style={{color}}>Tab1</Text>,
+          tabBarIcon: ({color}) => <IonIcons name="remove-sharp" />,
         }}
         component={Tab1Screen}
       />
+
       <Tab.Screen
         name="Tab2"
         options={{
-          title: 'Tab2',
-          tabBarIcon: ({color}) => <Text style={{color}}>Tab2</Text>,
+          tabBarIcon: ({color}) => <IonIcons name="reorder-two-sharp" />,
         }}
         component={TopTapsNavigators}
       />
@@ -51,7 +52,7 @@ export const BottomTabsNavigator = () => {
         name="Tab3"
         options={{
           title: 'Tab3',
-          tabBarIcon: ({color}) => <Text style={{color}}>Tab3</Text>,
+          tabBarIcon: ({color}) => <IonIcons name="reorder-three-sharp" />,
         }}
         component={StackNavigator}
       />

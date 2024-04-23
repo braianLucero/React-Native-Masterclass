@@ -8,6 +8,7 @@ import {
   DrawerActions,
 } from '@react-navigation/native';
 import {type RootStackParams} from '../../routes/StackNavigator';
+import {IonIcons} from '../../components/shared/IonIcons';
 
 export const HomeScreen = () => {
   const navigation = useNavigation<NavigationProp<RootStackParams>>();
@@ -17,7 +18,7 @@ export const HomeScreen = () => {
       headerLeft: () => (
         <Pressable
           onPress={() => navigation.dispatch(DrawerActions.toggleDrawer)}>
-          <Text>Menu</Text>
+          <IonIcons name="menu-outline" />
         </Pressable>
       ),
     });
