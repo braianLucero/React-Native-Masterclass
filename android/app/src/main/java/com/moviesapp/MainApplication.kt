@@ -1,4 +1,4 @@
-package com.contextapp
+package com.moviesapp
 
 import android.app.Application
 import com.facebook.react.PackageList

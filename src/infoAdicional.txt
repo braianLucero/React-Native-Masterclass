@@ -1,2 +1,0 @@
- --- siempre hacer el npx pod-install en cualquier cambio que haga
- --- y cuando vallamos a installar algun tipo de navegacion en native , installar dependencias globales en  getStarted
