@@ -10,6 +10,7 @@ export const HomeScreen = () => {
     <View style={Style.container}>
       <Text style={Style.title}>Nombre: {name}</Text>
       <Text style={Style.title}>Email: {email}</Text>
+      {/* <Text style={Style.title}>Count {count}</Text> */}
     </View>
   );
 };
