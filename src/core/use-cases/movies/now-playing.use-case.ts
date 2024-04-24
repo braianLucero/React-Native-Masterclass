@@ -15,5 +15,3 @@ export const moviesNowPlayingUseCase = async (
     throw new Error('Error fetching movies - NowPlaying');
   }
 };
-
-clas 146 ; caso de uso nowPlaying , adaptador HTTP para obtener datos de películas que se están reproduciendo actualmente
