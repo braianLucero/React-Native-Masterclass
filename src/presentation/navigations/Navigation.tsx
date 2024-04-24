@@ -17,7 +17,7 @@ export const Navigation = () => {
         headerShown: false,
       }}>
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Detail" component={DetailScreen} />
+      <Stack.Screen name="Details" component={DetailScreen} />
     </Stack.Navigator>
   );
 };
