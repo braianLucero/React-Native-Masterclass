@@ -1,5 +1,0 @@
-the movie Db endpoints
-
-/upcoming
-/top_rated
-/popular // moviesPopularUseCase
