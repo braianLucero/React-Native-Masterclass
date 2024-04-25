@@ -51,12 +51,3 @@ export const useMovies = () => {
     upcoming,
   };
 };
-
-//En este código, has creado un hook personalizado (useMovies) en React que utiliza varios casos de uso (moviesNowPlayingUseCase, moviesPopularUseCase, moviesTopRatedUseCase y moviesUpcomingUseCase) para obtener información sobre películas desde una API de MovieDB. Aquí tienes un resumen básico de lo que hace el código:
-
-// Importación de módulos: Se importan los módulos necesarios, incluyendo React (useEffect, useState) y los casos de uso relacionados con las películas.
-// Inicialización del estado: Se inicializan los estados isLoading, nowPlaying, popular, topRated y upcoming utilizando el hook useState.
-// Efecto secundario con useEffect: Se utiliza useEffect para ejecutar la función initialLoad una vez, cuando el componente se monta por primera vez.
-// Función initialLoad: Se define una función asíncrona initialLoad que utiliza los casos de uso para obtener información sobre las películas en cartelera, populares, mejor valoradas y próximas a estrenarse. Se espera a que todas las promesas se resuelvan utilizando Promise.all y luego se actualizan los estados correspondientes con los datos obtenidos.
-// Retorno del hook: Se retorna un objeto con los estados isLoading, nowPlaying, popular, topRated y upcoming, que pueden ser utilizados en el componente que llama a este hook para renderizar la información en la interfaz de usuario.
-// En resumen, este hook personalizado permite cargar información sobre películas desde la API de MovieDB y gestionar el estado de carga (isLoading) junto con las listas de películas en diferentes categorías.
